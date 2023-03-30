@@ -29,6 +29,7 @@
 
 5.install nodemon.js
 
-6.based on the .env.content,  you should enter your information of mongoDB to set the environment variable
+6.create a .env document, you should enter your information of mongoDB to set the environment variable
+(ex: MONGODB_URI=mongodb+srv://<username: password>@cluster0.kfjyllt.mongodb.net/URL-Shortener?retryWrites=true&w=majority)
 
 7.npm run dev
