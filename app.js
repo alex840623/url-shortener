@@ -48,6 +48,18 @@ app.post('/url', (req, res) => {
     .catch(error => console.error(error))
 })  
 
+// 新增動態路由
+app.get('/:randomNum', (req, res) => {
+  const randomNum = req.params.randomNum
+
+  URL.findOne({ newUrl: randomNum })
+    .then(data => {
+      res.redirect(data.url)
+    })
+    .catch(error => console.log(error))
+})
+
+
 // 設定 port 3000
 app.listen(3000, () => {
   console.log('App is running on http://localhost:3000')
